@@ -1,0 +1,5 @@
+?! createDialog "RscVDMJSqfCalc" : exit
+ctrlEnable [102, false]
+ctrlShow [103, false]
+ctrlShow [104, false]
+
