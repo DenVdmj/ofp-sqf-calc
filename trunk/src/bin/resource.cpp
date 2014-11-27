@@ -107,7 +107,7 @@ enum {
     cmd_radio_custom_0, //97
 };
 
-//class resource.bin {
+//class resource.cpp {
 class RadioProtocol {
     access = 3;
     class Default {
@@ -2158,7 +2158,7 @@ class RscTitle {
     access = 3;
     type = 0;
     idc = -1;
-    style = "32 +                   2";
+    style = 34;
     x = 0.15;
     y = 0.164;
     w = 0.7;
@@ -2167,7 +2167,7 @@ class RscTitle {
     colorBackground[] = {1,1,1,1};
     colorText[] = {0.08,0.08,0.12,1};
     font = "tahomaB36";
-    sizeEx = "1.0714 * 0.03";
+    sizeEx = 0.032142;
 };
 class RscFrame {
     access = 3;
@@ -2254,32 +2254,32 @@ class RscHTML {
     class H2 {
         font = "courierNewB64";
         fontBold = "courierNewB64";
-        sizeEx = "0.7 * 0.048";
+        sizeEx = 0.0336;
     };
     class H3 {
         font = "courierNewB64";
         fontBold = "courierNewB64";
-        sizeEx = "0.5 * 0.048";
+        sizeEx = 0.024;
     };
     class H4 {
         font = "courierNewB64";
         fontBold = "courierNewB64";
-        sizeEx = "0.4 * 0.048";
+        sizeEx = 0.0192;
     };
     class H5 {
         font = "garamond64";
         fontBold = "garamond64";
-        sizeEx = "0.6 * 0.048";
+        sizeEx = 0.0288;
     };
     class H6 {
         font = "AudreysHandI48";
         fontBold = "AudreysHandI48";
-        sizeEx = "0.7 * 0.045";
+        sizeEx = 0.0315;
     };
     class P {
         font = "courierNewB64";
         fontBold = "courierNewB64";
-        sizeEx = "0.47 * 0.048";
+        sizeEx = 0.02256;
     };
 };
 class RscButton {
@@ -2432,11 +2432,11 @@ class RscMapControl {
     fontLabel = "tahomaB24";
     sizeExLabel = 0.02;
     fontGrid = "tahomaB36";
-    sizeExGrid = "0.7 * 0.03";
+    sizeExGrid = 0.021;
     fontUnits = "tahomaB24";
     sizeExUnits = 0.02;
     fontNames = "courierNewB64";
-    sizeExNames = "3.0 * 0.048";
+    sizeExNames = 0.144;
     text = "podmapa.pac";
     class Tree {
         icon = "tree";
@@ -2545,6 +2545,7 @@ class RscToolbox {
 class RscNotebook {
     access = 3;
     movingEnable = 0;
+    /*
     class BackgroundA: RscPicture {
         text = "notasA.pac";
         x = 0;
@@ -2578,29 +2579,36 @@ class RscNotebook {
         colorText[] = {1,1,1,1};
     };
     class BackgroundE: RscPicture {
-        text = "notasE.pac";
-        x = 0.8;
+        //text = "notasE.pac";
+        text = "sloup_bily_orez.pac";
+        x = 0.85;
         y = 0;
-        w = 0.2;
+        w = 0.15;
         h = 0.5;
         colorText[] = {1,1,1,1};
     };
+    */
     class BackgroundF: RscPicture {
-        text = "notasF.pac";
-        x = 0.8;
-        y = 0.5;
-        w = 0.2;
-        h = 0.5;
+        //text = "notasF.pac";
+        //text = "a10_trupb_top2.pac";
+        //text = "facedookna.pac";
+        //text = "hospoda_stenad.pac";
+        text = "hospoda_ubrus.pac";
+        x = 0.85;
+        y = 0;
+        w = 0.15;
+        h = 1;
         colorText[] = {1,1,1,1};
     };
     class BackgroundF2: RscPicture {
         text = "notasF2.pac";
-        x = 0.8;
+        x = 0.85;
         y = 0.5;
         w = 0.2;
-        h = 0.5;
+        h = 0.4;
         colorText[] = {1,1,1,1};
     };
+    /*
     class BigFrame: RscFrame {
         x = 0.13;
         y = 0.137;
@@ -2608,53 +2616,54 @@ class RscNotebook {
         h = 0.75;
         colorText[] = {0.0,0.0,0.0,0.8};
     };
+    */
     class Weather: RscPicture {
         idc = 52;
         text = "bourka.paa";
-        x = 0.84;
-        y = 0.11;
-        w = 0.06;
-        h = 0.08;
+        x = 0.88;
+        y = 0.164;
+        w = 0.050;
+        h = 0.070;
     };
     class Position: RscNotebookText12 {
         idc = 53;
         style = 2;
         text = "";
-        x = 0.9;
-        y = 0.11;
-        w = 0.058;
-        h = 0.08;
+        x = 0.91;
+        y = 0.164;
+        w = 0.074;
+        h = 0.060;
     };
     class TimeFrame: RscFrame {
         colorText[] = {0.0,0.0,0.0,0.8};
-        x = 0.84;
-        y = 0.19;
-        w = 0.118;
-        h = 0.028;
+        x = 0.870;
+        y = 0.245;
+        w = 0.111;
+        h = 0.026;
     };
     class Time: RscNotebookText12 {
         idc = 54;
         style = 2;
-        x = 0.84;
-        y = 0.19;
-        w = 0.118;
-        h = 0.028;
+        x = 0.869;
+        y = 0.245;
+        w = 0.111;
+        h = 0.026;
         text = "";
     };
     class DateFrame: RscFrame {
         colorText[] = {0.0,0.0,0.0,0.8};
-        x = 0.84;
-        y = 0.228;
-        w = 0.118;
-        h = 0.028;
+        x = 0.870;
+        y = 0.282;
+        w = 0.111;
+        h = 0.026;
     };
     class Date: RscNotebookText10 {
         idc = 55;
         style = 2;
-        x = 0.84;
-        y = 0.228;
-        w = 0.118;
-        h = 0.028;
+        x = 0.870;
+        y = 0.282;
+        w = 0.111;
+        h = 0.026;
         text = "";
     };
 };
@@ -2662,10 +2671,11 @@ class RscMap: RscNotebook {
     access = 3;
     class Map: RscMapControl {
         moveOnEdges = 0;
-        x = 0.044;
-        y = 0.1;
-        w = 0.706;
-        h = 0.858;
+        x = 0;
+        y = 0;
+//      w = 1;
+        w = 0.855;
+        h = 1;
     };
 };
 class RscDisplay {
@@ -2798,7 +2808,7 @@ class RscDisplayInsertMarker {
         x = 0;
         y = 0;
         w = 0.05;
-        h = "0.05 * 4 / 3";
+        h = 0.06666667;
         colorText[] = {0,0,0,1};
     };
     class Text: RscEdit {
@@ -2884,121 +2894,150 @@ class RscDisplayCustomArcade {
         text = "$STR_DISP_CANCEL";
     };
 };
+
 class RscDisplayArcadeMap: RscMap {
     idd = 26;
-    controls[] = {"BackgroundA","BackgroundB","BackgroundC","BackgroundD","BackgroundE","BackgroundF","BigFrame","Weather","Position","TimeFrame","Time","DateFrame","Date","Map","ToolboxMode","Difficulty","ButtonIntel","ButtonLoad","ButtonMerge","ButtonSave","ButtonClear","Section","ButtonIds","ButtonTextures","ButtonPreview","ButtonContinue","ButtonCancel"};
+    controls[] = {
+"BackgroundF","Weather","Position","TimeFrame","Time","DateFrame",
+"Date","Map","ToolboxMode","Difficulty","ButtonIntel","ButtonLoad","ButtonMerge","ButtonSave","ButtonClear","Section","ButtonTest",
+"ButtonIds","ButtonTextures","ButtonPreview","ButtonContinue","ButtonCancel"};
+
+/*
+    controls[] = {"BackgroundA","BackgroundB","BackgroundC","BackgroundD","BackgroundE","BackgroundF","BigFrame",
+        "Weather","Position","TimeFrame","Time","DateFrame",
+"Date","Map","ToolboxMode","Difficulty","ButtonIntel","ButtonLoad","ButtonMerge","ButtonSave","ButtonClear","Section",
+"ButtonIds","ButtonTextures","ButtonPreview","ButtonContinue","ButtonCancel"};
+*/
     class ToolboxMode: RscToolbox {
         idc = 104;
-        x = 0.097;
-        y = 0.014;
-        w = 0.689;
-        h = 0.038;
-        strings[] = {"$STR_DISP_ARCMAP_UNITS","$STR_DISP_ARCMAP_GROUPS","$STR_DISP_ARCMAP_SENSORS","$STR_DISP_ARCMAP_WAYPOINTS","$STR_DISP_ARCMAP_SYNCHRONIZE","$STR_DISP_ARCMAP_MARKERS"};
-        rows = 1;
-        columns = 6;
+        x = 0.86;
+        y = 0.01;
+        w = 0.13;
+        h = 0.145;
+        strings[] = {
+            "$STR_DISP_ARCMAP_UNITS",
+            "$STR_DISP_ARCMAP_GROUPS",
+            "$STR_DISP_ARCMAP_SENSORS",
+            "$STR_DISP_ARCMAP_WAYPOINTS",
+            "$STR_DISP_ARCMAP_SYNCHRONIZE",
+            "$STR_DISP_ARCMAP_MARKERS"
+        };
+        rows = 6;
+        columns = 1;
+        colorText[] = {1,1,1,.5};
+        colorTextSelect[] = {1,1,0,.5};
     };
     class Difficulty: RscActiveText {
         idc = 110;
         style = 2;
         font = "SteelfishB64";
         sizeEx = 0.05;
-        x = 0.81;
-        y = 0.01;
-        w = 0.15;
+        x = 0.862;
+        y = 0.717;
+        w = 0.128;
         h = 0.04;
         text = "$STR_DISP_ERROR";
-        color[] = {0.8,0.8,0.8,1};
-        colorActive[] = {0.8,0.8,0,1};
+        color[] = {.4,.4,.4,.5};
+        colorActive[] = {.5,.5,.5,.6};
     };
     class ButtonIntel: RscActiveText {
         idc = 105;
-        x = 0.834;
-        y = 0.114;
-        w = 0.134;
-        h = 0.153;
+        x = 0.862;
+        y = 0.163;
+        w = 0.128;
+        h = 0.156;
         text = "";
-        color[] = {0.08,0.08,0.12,1};
-        colorActive[] = {0.08,0.08,0.12,1};
+        color[] = {"TextColor",1};
+        colorActive[] = {"TextColor",1};
     };
     class ButtonLoad: RscButtonMap {
         idc = 101;
-        x = 0.834;
-        y = 0.32;
-        w = 0.13;
-        h = 0.05;
+        x = 0.862;
+        y = 0.363;
+        w = 0.128;
+        h = 0.04;
         text = "$STR_DISP_ARCMAP_LOAD";
     };
     class ButtonMerge: RscButtonMap {
         idc = 106;
-        x = 0.834;
-        y = 0.38;
-        w = 0.13;
-        h = 0.05;
+        x = 0.862;
+        y = 0.403;
+        w = 0.128;
+        h = 0.04;
         text = "$STR_DISP_ARCMAP_MERGE";
     };
     class ButtonSave: RscButtonMap {
         idc = 102;
-        x = 0.834;
-        y = 0.44;
-        w = 0.13;
-        h = 0.05;
+        x = 0.862;
+        y = 0.443;
+        w = 0.128;
+        h = 0.04;
         text = "$STR_DISP_ARCMAP_SAVE";
     };
     class ButtonClear: RscButtonMap {
         idc = 103;
-        x = 0.834;
-        y = 0.5;
-        w = 0.13;
-        h = 0.05;
+        x = 0.862;
+        y = 0.483;
+        w = 0.128;
+        h = 0.04;
         text = "$STR_DISP_ARCMAP_CLEAR";
     };
     class Section: RscCombo {
         idc = 109;
-        x = 0.834;
-        y = 0.56;
-        w = 0.13;
+        x = 0.862;
+        y = 0.536;
+        w = 0.128;
         h = 0.03;
         wholeHeight = 0.12;
         colorText[] = {1,1,1,0.75};
     };
+    class ButtonTest: RscButtonMap {
+        idc = 108;
+        x = 0.862;
+        y = 0.585;
+        w = 0.128;
+        h = 0.04;
+        text = "$STR/SQFCALC/CONSOLE";
+        action = "0 exec ""\vdmj_sqfcalc\open.sqs""";
+    };
     class ButtonIds: RscButtonMap {
         idc = 111;
-        x = 0.834;
-        y = 0.62;
-        w = 0.13;
-        h = 0.05;
+        x = 0.862;
+        y = 0.625;
+        w = 0.128;
+        h = 0.04;
         text = "$STR_DISP_ERROR";
     };
     class ButtonTextures: RscButtonMap {
         idc = 112;
-        x = 0.834;
-        y = 0.68;
-        w = 0.13;
-        h = 0.05;
+        x = 0.862;
+        y = 0.665;
+        w = 0.128;
+        h = 0.04;
         text = "$STR_DISP_ERROR";
     };
     class ButtonPreview: RscButtonMap {
         idc = 107;
-        x = 0.834;
-        y = 0.755;
-        w = 0.13;
+        x = 0.862;
+        y = 0.831;
+        w = 0.128;
         h = 0.05;
         text = "$STR_DISP_ARCMAP_PREVIEW";
         default = 1;
     };
     class ButtonContinue: RscButtonMap {
         idc = 108;
-        x = 0.834;
-        y = 0.815;
-        w = 0.13;
+        x = 0.862;
+        y = 0.881;
+        w = 0.128;
         h = 0.05;
         text = "$STR_DISP_ARCMAP_CONTINUE";
     };
     class ButtonCancel: RscButtonMap {
         idc = 2;
-        x = 0.834;
-        y = 0.875;
-        w = 0.13;
+        x = 0.862;
+        y = 0.935;
+        w = 0.128;
         h = 0.05;
         text = "$STR_DISP_ARCMAP_EXIT";
     };
@@ -5949,7 +5988,7 @@ class RscTextMenu: RscText {
     access = 3;
     colorText[] = {1,1,1,0.8};
     font = "courierNewB64";
-    sizeEx = "0.7 * 0.048";
+    sizeEx = 0.0336;
     h = 0.13;
 };
 class Rsc3DActiveMenu {
@@ -6101,7 +6140,7 @@ class RscDisplayMain: RscDisplayBackgroundStripesDark {
     controlsBackground[] = {"Background1","Background2","Background3"};
     controls[] = {"FP1","FP2","FP3","Line1","Line2","Continue","Player","Game","SingleMission","Multiplayer","Custom","Options","Quit","Version","AllMissions","Copy"};
     class copy: RscText {
-        style = "16 +                   2 +                 512";
+        style = 530;
         lineSpacing = 1.0;
         text = "$STR_CREDITS23";
         x = 0.03;
@@ -6165,7 +6204,7 @@ class RscDisplayMain: RscDisplayBackgroundStripesDark {
         w = 0.0;
         h = 0.0;
         font = "SteelfishB128";
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         text = "$STR_DISP_MAIN_CONTINUE";
     };
     class Player: RscActiveMenu {
@@ -6175,12 +6214,12 @@ class RscDisplayMain: RscDisplayBackgroundStripesDark {
         w = 0.5;
         h = 0.05;
         font = "SteelfishB128";
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         text = "$STR_DISP_ERROR";
     };
     class Game: RscActiveMenu {
         font = "SteelfishB128";
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         idc = 101;
         x = 0.72;
         y = 0.145;
@@ -6190,7 +6229,7 @@ class RscDisplayMain: RscDisplayBackgroundStripesDark {
     };
     class SingleMission: RscActiveMenu {
         font = "SteelfishB128";
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         idc = 117;
         x = 0.72;
         y = 0.33;
@@ -6201,7 +6240,7 @@ class RscDisplayMain: RscDisplayBackgroundStripesDark {
     };
     class Multiplayer: RscActiveMenu {
         font = "SteelfishB128";
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         idc = 105;
         x = 0.72;
         y = 0.39;
@@ -6211,7 +6250,7 @@ class RscDisplayMain: RscDisplayBackgroundStripesDark {
     };
     class Custom: RscActiveMenu {
         font = "SteelfishB128";
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         style = 1;
         idc = 115;
         x = 0.38;
@@ -6222,7 +6261,7 @@ class RscDisplayMain: RscDisplayBackgroundStripesDark {
     };
     class Options: RscActiveMenu {
         font = "SteelfishB128";
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         idc = 102;
         style = 1;
         x = 0.48;
@@ -6238,7 +6277,7 @@ class RscDisplayMain: RscDisplayBackgroundStripesDark {
         y = 0.8;
         w = 0.2;
         h = 0.05;
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         text = "$STR_DISP_MAIN_QUIT";
     };
     class Date: RscText {
@@ -6272,7 +6311,7 @@ class RscDisplayMain: RscDisplayBackgroundStripesDark {
         w = 0.52;
         h = 0.03;
         font = "SteelfishB64";
-        sizeEx = "0.5 * 0.05";
+        sizeEx = 0.025;
         colorText[] = {1,1,1,0.25};
         text = "$STR_DISP_MAIN_DESIGN";
     };
@@ -6284,7 +6323,7 @@ class RscDisplayMainVBS1: RscDisplayBackgroundStripesDark {
     controlsBackground[] = {"Background1","Background2","Background3"};
     controls[] = {"VBS1","Line1","Line2","Continue","Player","Game","SingleMission","Multiplayer","Custom","Options","Quit","Version","AllMissions","Copy"};
     class copy: RscText {
-        style = "16 +                   2 +                 512";
+        style = 530;
         lineSpacing = 1.0;
         text = "$STR_CREDITS23";
         x = 0.03;
@@ -6304,7 +6343,7 @@ class RscDisplayMainVBS1: RscDisplayBackgroundStripesDark {
         text = "VBS1";
         font = "SteelfishB128";
         colorText[] = {1,1,1,0.5};
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
     };
     class Line1: RscText {
         style = 176;
@@ -6335,7 +6374,7 @@ class RscDisplayMainVBS1: RscDisplayBackgroundStripesDark {
         w = 0.0;
         h = 0.0;
         font = "SteelfishB128";
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         text = "$STR_DISP_MAIN_CONTINUE";
     };
     class Player: RscActiveMenu {
@@ -6345,12 +6384,12 @@ class RscDisplayMainVBS1: RscDisplayBackgroundStripesDark {
         w = 0.5;
         h = 0.05;
         font = "SteelfishB128";
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         text = "$STR_DISP_ERROR";
     };
     class Game: RscActiveMenu {
         font = "SteelfishB128";
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         idc = 101;
         x = 0.72;
         y = 0.145;
@@ -6360,7 +6399,7 @@ class RscDisplayMainVBS1: RscDisplayBackgroundStripesDark {
     };
     class SingleMission: RscActiveMenu {
         font = "SteelfishB128";
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         idc = 117;
         x = 0.72;
         y = 0.33;
@@ -6371,7 +6410,7 @@ class RscDisplayMainVBS1: RscDisplayBackgroundStripesDark {
     };
     class Multiplayer: RscActiveMenu {
         font = "SteelfishB128";
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         idc = 105;
         x = 0.72;
         y = 0.39;
@@ -6381,7 +6420,7 @@ class RscDisplayMainVBS1: RscDisplayBackgroundStripesDark {
     };
     class Custom: RscActiveMenu {
         font = "SteelfishB128";
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         style = 1;
         idc = 115;
         x = 0.48;
@@ -6392,7 +6431,7 @@ class RscDisplayMainVBS1: RscDisplayBackgroundStripesDark {
     };
     class Options: RscActiveMenu {
         font = "SteelfishB128";
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         idc = 102;
         style = 1;
         x = 0.48;
@@ -6408,7 +6447,7 @@ class RscDisplayMainVBS1: RscDisplayBackgroundStripesDark {
         y = 0.8;
         w = 0.2;
         h = 0.05;
-        sizeEx = "0.6 * 0.098";
+        sizeEx = 0.0588;
         text = "$STR_DISP_MAIN_QUIT";
     };
     class Date: RscText {
@@ -6442,7 +6481,7 @@ class RscDisplayMainVBS1: RscDisplayBackgroundStripesDark {
         w = 0.52;
         h = 0.03;
         font = "SteelfishB64";
-        sizeEx = "0.5 * 0.05";
+        sizeEx = 0.025;
         colorText[] = {1,1,1,0.25};
         text = "$STR_DISP_MAIN_DESIGN";
     };
@@ -7107,19 +7146,19 @@ class RscDisplayDifficulty: RscDisplayStripesBrightLayeredBackground {
         class TextName: RscObjNotebookText {
             x = 0.025;
             y = 0.033;
-            w = "0.95 * 0.6";
+            w = 0.57;
             text = "$STR_DISP_DIFF_NAME";
         };
         class TextCadet: RscObjNotebookText {
-            x = "0.025 +  0.95 * 0.6";
+            x = 0.595;
             y = 0.033;
-            w = "0.95 * 0.2";
+            w = 0.19;
             text = "$STR_DISP_DIFF_CADET";
         };
         class TextVeteran: RscObjNotebookText {
-            x = "0.025 +  0.95 * 0.8";
+            x = 0.785;
             y = 0.033;
-            w = "0.95 * 0.2";
+            w = 0.19;
             text = "$STR_DISP_DIFF_VETERAN";
         };
         class ValueDifficulties: RscObjNotebookListBox {
@@ -7128,7 +7167,7 @@ class RscDisplayDifficulty: RscDisplayStripesBrightLayeredBackground {
             y = 0.1;
             w = 0.95;
             h = 0.767;
-            rows = "0.767 / 0.05";
+            rows = 15.34;
             size = 0.9;
         };
         class EnableSubtitles: RscObjNotebookButton {
@@ -7215,13 +7254,13 @@ class RscDisplayConfigure: RscDisplayStripesBrightLayeredBackground {
         class TextName: RscObjNotebookText {
             x = 0.025;
             y = 0.033;
-            w = "0.95 * 0.95 * 0.4";
+            w = 0.361;
             text = "$STR_DISP_CONF_NAME";
         };
         class TextKeys: RscObjNotebookText {
-            x = "0.025 + 0.95 * 0.95 * 0.4";
+            x = 0.386;
             y = 0.033;
-            w = "0.95 * 0.95 * 0.6";
+            w = 0.5415;
             text = "$STR_DISP_CONF_KEYS";
         };
         class ValueKeys: RscObjNotebookListBox {
@@ -7407,68 +7446,68 @@ class RscDisplayMultiplayer: RscDisplayStripesLayeredBackground {
         class ColumnServer: TitleColumn {
             idc = 112;
             text = "$STR_MP_SERVER";
-            x = "0.025 +        0.015";
-            w = "0.38 *     0.9025 -        0.015";
+            x = 0.04;
+            w = 0.32795;
         };
         class FilterServer: FilterColumn {
             idc = 125;
             x = 0.025;
-            w = "0.38 *     0.9025";
+            w = 0.34295;
         };
         class IconMission: TitleIcon {
             idc = 113;
-            x = "0.025 + 0.38 *     0.9025";
+            x = 0.36795;
         };
         class ColumnMission: TitleColumn {
             idc = 114;
             text = "$STR_SECTION_MISSION";
-            x = "0.025 + 0.38 *     0.9025 +        0.015";
-            w = "0.3 *  0.9025 -        0.015";
+            x = 0.38295;
+            w = 0.25575;
         };
         class FilterMission: FilterColumn {
             idc = 126;
-            x = "0.025 + 0.38 *     0.9025";
-            w = "0.3 *  0.9025";
+            x = 0.36795;
+            w = 0.27075;
         };
         class IconState: TitleIcon {
             idc = 115;
-            x = "0.025 + 0.68 *     0.9025";
+            x = 0.6387;
         };
         class ColumnState: TitleColumn {
             idc = 116;
             text = "$STR_MENU_STATUS";
-            x = "0.025 + 0.68 *     0.9025 +        0.015";
-            w = "0.12 *     0.9025 -        0.015";
+            x = 0.6537;
+            w = 0.0933;
         };
         class IconPlayers: TitleIcon {
             idc = 117;
-            x = "0.025 + 0.8 *  0.9025";
+            x = 0.747;
         };
         class ColumnPlayers: TitleColumn {
             idc = 118;
             text = "$STR_MPTABLE_PLAYERS";
-            x = "0.025 + 0.8 *  0.9025 +        0.015";
-            w = "0.12 *     0.9025 -        0.015";
+            x = 0.762;
+            w = 0.0933;
         };
         class FilterPlayers: FilterColumn {
             idc = 127;
-            x = "0.025 + 0.8 *  0.9025";
-            w = "0.12 *     0.9025";
+            x = 0.747;
+            w = 0.1083;
         };
         class IconPing: TitleIcon {
             idc = 119;
-            x = "0.025 + 0.92 *     0.9025";
+            x = 0.8553;
         };
         class ColumnPing: TitleColumn {
             idc = 120;
             text = "$STR_DISP_MULTI_PING";
-            x = "0.025 + 0.92 *     0.9025 +        0.015";
-            w = "0.08 *     0.9025 -        0.015";
+            x = 0.8703;
+            w = 0.0572;
         };
         class FilterPing: FilterColumn {
             idc = 128;
-            x = "0.025 + 0.92 *     0.9025";
-            w = "0.08 *     0.9025";
+            x = 0.8553;
+            w = 0.0722;
         };
         class ValueSessions: RscObjNotebookListBox {
             idc = 102;
@@ -8070,7 +8109,7 @@ class RscDisplayRemoteMissions: RscDisplayServer {
         colorBackground[] = {1,1,1,0.75};
         colorText[] = {0,0,0,1};
         text = "$STR_DISP_SRVSETUP_PLAYERS";
-        style = "0 +            160";
+        style = 160;
     };
     class PlayersBackground: RscText {
         x = 0.7;
@@ -8303,7 +8342,7 @@ class RscDisplayClient {
         colorBackground[] = {1,1,1,0.75};
         colorText[] = {0,0,0,1};
         text = "$STR_DISP_SRVSETUP_PLAYERS";
-        style = "0 +            160";
+        style = 160;
     };
     class PlayersBackground: RscText {
         x = 0.7;
@@ -8527,7 +8566,7 @@ class RscDisplayMultiplayerSetup: RscDisplayStripesLayeredBackground {
         };
         class TextMessage: Frame {
             idc = 115;
-            style = "80 +                   2";
+            style = 82;
             x = 0.025;
             y = 0.925;
             w = 0.95;
@@ -9060,7 +9099,7 @@ class RscDisplayMainMap {
             color[] = {0.5,0.5,0.5,1};
             colorActive[] = {0,0,0,1};
             font = "SteelfishB64";
-            sizeEx = "0.6 * 0.05";
+            sizeEx = 0.03;
             x = 0;
             w = 1;
             h = 0.1;
@@ -9130,14 +9169,14 @@ class RscDisplayMainMap {
             text = "$STR_DISP_ERROR";
             colorText[] = {0,0,0,1};
             font = "courierNewB64";
-            sizeEx = "0.8 * 0.048";
+            sizeEx = 0.0384;
         };
         class RscBookmarkText: RscActiveText {
             style = 2;
             color[] = {0,0,0,1};
             colorActive[] = {1,1,1,1};
             font = "courierNewB64";
-            sizeEx = "0.5 * 0.048";
+            sizeEx = 0.024;
             x = 0;
             y = 0;
             w = 1;
@@ -9194,7 +9233,7 @@ class RscDisplayMainMap {
             h = 1;
             selection = "karta";
             font = "courierNewB64";
-            sizeEx = "0.5 * 0.048";
+            sizeEx = 0.024;
             color[] = {0,0,0,1};
         };
     };
@@ -9220,7 +9259,7 @@ class RscDisplayMainMap {
             w = 1;
             h = 1;
             font = "courierNewB64";
-            sizeEx = "0.8 * 0.048";
+            sizeEx = 0.0384;
             colorText[] = {0.33,0.52,0.43,1};
             text = "";
         };
@@ -9295,7 +9334,7 @@ class RscDisplayServerGetReady: RscDisplayGetReady {
         colorBackground[] = {1,1,1,0.75};
         colorText[] = {0,0,0,1};
         text = "$STR_DISP_SRVSETUP_PLAYERS";
-        style = "0 +            160";
+        style = 160;
     };
     class PlayersBackground: RscText {
         x = 0.7;
@@ -9361,7 +9400,7 @@ class RscDisplayClientGetReady: RscDisplayGetReady {
         colorBackground[] = {1,1,1,0.75};
         colorText[] = {0,0,0,1};
         text = "$STR_DISP_SRVSETUP_PLAYERS";
-        style = "0 +            160";
+        style = 160;
     };
     class PlayersBackground: RscText {
         x = 0.7;
@@ -9519,7 +9558,7 @@ class RscDisplayDebriefing: RscDisplayBackgroundStripes {
         colorBackground[] = {1,1,1,0.75};
         colorText[] = {0,0,0,1};
         text = "$STR_DISP_SRVSETUP_PLAYERS";
-        style = "0 +            160";
+        style = 160;
     };
     class PlayersBackground: RscText {
         idc = 108;
@@ -9864,7 +9903,7 @@ class RscDisplayNewUser {
             x = 0.025;
             y = 0.143;
             w = 0.45;
-            h = "0.967 - 0.143";
+            h = 0.824;
             text = "";
         };
         class TextFace: RscObjNotebookText {
@@ -10238,11 +10277,11 @@ class RscDisplayCampaignLoad {
         class BookTableRowTitle: BookText {
             x = 0.05;
             w = 0.15;
-            style = "2 +            160";
+            style = 162;
         };
         class BookTableItem: BookText {
             w = 0.15;
-            style = "2 +            160";
+            style = 162;
         };
         class KillsTitle: BookTableRowTitle {
             idc = 116;
@@ -10583,7 +10622,7 @@ class RscDisplayInterrupt: RscDisplayBackgroundStripesDark {
         w = 0.15;
         h = 0.05;
         text = "$STR/SQFCALC/CONSOLE";
-        action = "0 exec {\vdmj_sqfcalc\open.sqs}";
+        action = "0 exec ""\vdmj_sqfcalc\open.sqs""";
     };
     class ButtonRetry: RscActiveMenu {
         idc = 105;
@@ -10637,7 +10676,7 @@ class RscDisplayMissionEnd: RscDisplayBackgroundStripesDark {
         h = 0.05;
         font = "SteelfishB64";
         colorText[] = {1,1,1,1};
-        sizeEx = "1.6 * 0.05";
+        sizeEx = 0.08;
         text = "$STR_DISP_ERROR";
     };
     class Quotation: RscText {
@@ -10645,11 +10684,11 @@ class RscDisplayMissionEnd: RscDisplayBackgroundStripesDark {
         style = 16;
         lineSpacing = 1;
         x = 0.15;
-        y = "0.88 - 0.125";
+        y = 0.755;
         w = 0.6;
         h = 0.12;
         font = "SteelfishB64";
-        sizeEx = "0.8 * 0.05";
+        sizeEx = 0.04;
         colorText[] = {1,1,1,1};
         text = "$STR_DISP_ERROR";
     };
@@ -10657,11 +10696,11 @@ class RscDisplayMissionEnd: RscDisplayBackgroundStripesDark {
         idc = 103;
         style = 1;
         x = 0.2;
-        y = "0.92 - 0.125";
+        y = 0.795;
         w = 0.7;
         h = 0.1;
         font = "SteelfishB64";
-        sizeEx = "0.8 * 0.05";
+        sizeEx = 0.04;
         colorText[] = {1,1,1,1};
         text = "$STR_DISP_ERROR";
     };
@@ -10695,9 +10734,9 @@ class RscDisplayMissionEnd: RscDisplayBackgroundStripesDark {
 class RscTitlesText {
     access = 3;
     fontBasic = "SteelfishB64";
-    sizeExBasic = "0.9 * 0.05";
+    sizeExBasic = 0.045;
     fontDown = "SteelfishB64";
-    sizeExDown = "0.9 * 0.05";
+    sizeExDown = 0.045;
 };
 class RscIGText: RscText {
     access = 3;
@@ -10705,7 +10744,7 @@ class RscIGText: RscText {
     colorText[] = {0.8,0.8,0.8,1};
     font = "tahomaB24";
     sizeEx = 0.02;
-    style = "0 +                    256";
+    style = 256;
 };
 class RscIGProgress {
     access = 3;
@@ -10737,7 +10776,7 @@ class RscDisplayHintC {
     };
     class Hint: RscIGText {
         idc = 102;
-        style = "16 +                   256";
+        style = 272;
         lineSpacing = 1;
         x = 0.36;
         y = 0.41;
@@ -10788,7 +10827,7 @@ class RscInGameUI {
         };
         class Date: RscIGText {
             idc = 102;
-            style = "1 +                    256";
+            style = 257;
             x = 0.025;
             y = 0.025;
             w = 0.19;
@@ -10817,7 +10856,7 @@ class RscInGameUI {
         };
         class Ammo: RscIGText {
             idc = 119;
-            style = "1 +                    256";
+            style = 257;
             x = 0.025;
             y = 0.033;
             w = 0.19;
@@ -10851,7 +10890,7 @@ class RscInGameUI {
         };
         class Ammo: RscIGText {
             idc = 119;
-            style = "1 +                    256";
+            style = 257;
             x = 0.025;
             y = 0.185;
             w = 0.19;
@@ -10923,7 +10962,7 @@ class RscInGameUI {
         };
         class Ammo: RscIGText {
             idc = 119;
-            style = "1 +                    256";
+            style = 257;
             x = 0.025;
             y = 0.105;
             w = 0.19;
@@ -10951,7 +10990,7 @@ class RscInGameUI {
         };
         class Hint: RscIGText {
             idc = 102;
-            style = "16 +                   256";
+            style = 272;
             lineSpacing = 1;
             x = 0.025;
             y = 0.033;
@@ -11005,7 +11044,7 @@ class RscTitles {
             colorText[] = {0,0,0,0};
         };
         class WWW: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "w w w . b i s t u d i o . c o m";
             x = 0.05;
@@ -11068,7 +11107,7 @@ class RscTitles {
         name = "Copyrights";
         controls[] = {"Background","CM4","CM1","CM2","CM3","CopText","InfoText"};
         class CopText: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.5;
             text = "© 2001 Bohemia Interactive and The Codemasters Software Company Limited (""Codemasters""). \nAll rights reserved. ""Codemasters""® is a registered trademark of Codemasters. \n""GENIUS AT PLAY""™ and ""Operation Flashpoint""™ are trademarks of Codemasters. \nDeveloped by Bohemia Interactive. Published by Codemasters. \nAll other copyrights or trademarks are the property of their respective owners.";
             x = 0.05;
@@ -11077,10 +11116,10 @@ class RscTitles {
             h = 0.5;
             colorText[] = {1,1,1,1};
             font = "tahomaB36";
-            sizeEx = "0.8 * 0.03";
+            sizeEx = 0.024;
         };
         class InfoText: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.5;
             text = "Counterfeit copying or trading in counterfeit copies is illegal.\nOperation Flashpoint: Cold War Crisis is protected from  unauthorized copying by a unique system. In counterfeit copies, the gameplay will degrade after a period of time to a point where the game is no longer playable. This does not happen to genuine software. if you are any doubt about the authenticity of your Operation Flashpoint disc, make sure you have original packaging and a printed silver disc. \nCOUNTERFEIT SOFTWARE IS NOT WORTH PURCHASING.";
             x = 0.05;
@@ -11089,7 +11128,7 @@ class RscTitles {
             h = 0.5;
             colorText[] = {1.0,1.0,0.5,1};
             font = "tahomaB36";
-            sizeEx = "0.8 * 0.03";
+            sizeEx = 0.024;
         };
         class CM1: RscPicture {
             text = "CM1fit.paa";
@@ -11136,7 +11175,7 @@ class RscTitles {
         name = "Features";
         controls[] = {"Background","Back","FP1","FP2","FP3","Text1","Text2"};
         class Text1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "» The best of cold war military equipment: battling on foot, in armor and in the sky\n\n» 30+ playable vehicles, 20+ different infantry weapons: guns, missiles, explosives\n\n» Leadership of up to 12 units in the squad: simple point and click interface \n\n» Over 50 missions on 3 huge islands: featuring a campaign with exciting storyline\n\n» Intuitive mission editor: players can create own missions and campaigns \n\n» Multiplayer combat over LAN or Internet: including Voice Over Net";
             x = 0.0;
@@ -11145,7 +11184,7 @@ class RscTitles {
             h = 0.73;
             colorText[] = {1.0,1.0,1.0,1};
             font = "SteelfishB64";
-            sizeEx = "0.8 * 0.05";
+            sizeEx = 0.04;
         };
         class Back: RscText {
             x = 0.0;
@@ -11156,7 +11195,7 @@ class RscTitles {
             colorBackground[] = {0.12,0.15,0.04,1};
         };
         class Text2: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1;
             text = "OUT NOW!";
             x = 0.05;
@@ -11376,7 +11415,7 @@ class RscTitles {
             h = 0.12;
         };
         class web: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "www.bistudio.com";
             x = 0.41;
@@ -11385,10 +11424,10 @@ class RscTitles {
             h = 0.7;
             colorText[] = {1,1,1,1};
             font = "\fonts\tahomaB36";
-            sizeEx = "0.7 * 0.03";
+            sizeEx = 0.021;
         };
         class dev: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS12a";
             x = 0.41;
@@ -11397,14 +11436,14 @@ class RscTitles {
             h = 0.7;
             colorText[] = {1,1,1,1};
             font = "\fonts\tahomaB36";
-            sizeEx = "0.6 * 0.03";
+            sizeEx = 0.018;
         };
     };
     class BISleader: creditsbackBIS {
         name = "BISleader";
         controls[] = {"Back","background","web","BIS1","BIS2","work1","name1","dev"};
         class work1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS01";
             x = 0.36;
@@ -11413,10 +11452,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.7 * 0.05";
+            sizeEx = 0.035;
         };
         class name1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN01";
             x = 0.36;
@@ -11425,14 +11464,14 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "1.1 * 0.05";
+            sizeEx = 0.055;
         };
     };
     class BISprogram: creditsbackBIS {
         name = "BISprogrammer";
         controls[] = {"Back","background","web","BIS1","BIS2","work1","name1","dev"};
         class work1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS02";
             x = 0.36;
@@ -11441,10 +11480,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.7 * 0.05";
+            sizeEx = 0.035;
         };
         class name1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN02";
             x = 0.36;
@@ -11453,14 +11492,14 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
     };
     class BISart: creditsbackBIS {
         name = "BISart";
         controls[] = {"Back","background","web","BIS1","BIS2","work1","name1","dev"};
         class work1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS03";
             x = 0.36;
@@ -11469,10 +11508,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.7 * 0.05";
+            sizeEx = 0.035;
         };
         class name1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN03";
             x = 0.36;
@@ -11481,14 +11520,14 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
     };
     class BISdesign: creditsbackBIS {
         name = "BISdesign";
         controls[] = {"Back","background","web","BIS1","BIS2","work1","name1","dev"};
         class work1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS04";
             x = 0.36;
@@ -11497,10 +11536,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.7 * 0.05";
+            sizeEx = 0.035;
         };
         class name1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN04";
             x = 0.36;
@@ -11509,14 +11548,14 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
     };
     class BISother1: creditsbackBIS {
         name = "BISother1";
         controls[] = {"Back","background","web","BIS1","BIS2","work1","work2","work3","name1","name2","name3","dev"};
         class work1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS05";
             x = 0.36;
@@ -11525,10 +11564,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.7 * 0.05";
+            sizeEx = 0.035;
         };
         class name1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN05";
             x = 0.36;
@@ -11537,10 +11576,10 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
         class work2: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS06";
             x = 0.36;
@@ -11549,10 +11588,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.7 * 0.05";
+            sizeEx = 0.035;
         };
         class name2: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN06";
             x = 0.36;
@@ -11561,10 +11600,10 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
         class work3: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS07";
             x = 0.36;
@@ -11573,10 +11612,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.7 * 0.05";
+            sizeEx = 0.035;
         };
         class name3: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN07";
             x = 0.36;
@@ -11585,14 +11624,14 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
     };
     class BISmusic: creditsbackBIS {
         name = "BISmusic";
         controls[] = {"Back","background","web","BIS1","BIS2","work1","name1","name2","name3","name4","dev"};
         class work1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS09";
             x = 0.36;
@@ -11601,10 +11640,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.7 * 0.05";
+            sizeEx = 0.035;
         };
         class name1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN09";
             x = 0.36;
@@ -11613,10 +11652,10 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
         class name2: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN09a";
             x = 0.36;
@@ -11625,10 +11664,10 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.5 * 0.05";
+            sizeEx = 0.025;
         };
         class name3: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN09b";
             x = 0.36;
@@ -11637,10 +11676,10 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.5 * 0.05";
+            sizeEx = 0.025;
         };
         class name4: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN09c";
             x = 0.36;
@@ -11649,14 +11688,14 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
     };
     class BISsfx: creditsbackBIS {
         name = "BISsfx";
         controls[] = {"Back","background","web","BIS1","BIS2","work1","work2","name1","name2","dev","copy"};
         class work1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS10";
             x = 0.36;
@@ -11665,10 +11704,10 @@ class RscTitles {
             h = 0.98;
             colorText[] = {0.75,0.75,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.7 * 0.05";
+            sizeEx = 0.035;
         };
         class name1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN10";
             x = 0.36;
@@ -11677,10 +11716,10 @@ class RscTitles {
             h = 0.98;
             colorText[] = {1.0,1.0,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.8 * 0.05";
+            sizeEx = 0.04;
         };
         class work2: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS08";
             x = 0.36;
@@ -11689,10 +11728,10 @@ class RscTitles {
             h = 0.98;
             colorText[] = {0.75,0.75,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.7 * 0.05";
+            sizeEx = 0.035;
         };
         class name2: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN08";
             x = 0.36;
@@ -11701,10 +11740,10 @@ class RscTitles {
             h = 0.98;
             colorText[] = {1.0,1.0,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
         class copy: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_COPY";
             x = 0.36;
@@ -11713,14 +11752,14 @@ class RscTitles {
             h = 0.98;
             colorText[] = {1.0,1.0,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.6 * 0.05";
+            sizeEx = 0.03;
         };
     };
     class BISthx: creditsbackBIS {
         name = "BISthx";
         controls[] = {"Back","background","web","BIS1","BIS2","work2","name2","dev"};
         class work2: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS11";
             x = 0.36;
@@ -11729,10 +11768,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.7 * 0.05";
+            sizeEx = 0.035;
         };
         class name2: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN11";
             x = 0.36;
@@ -11741,7 +11780,7 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.8 * 0.05";
+            sizeEx = 0.04;
         };
     };
     class creditsbackCM {
@@ -11796,7 +11835,7 @@ class RscTitles {
             h = 0.1;
         };
         class pub: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS12";
             x = 0.41;
@@ -11805,10 +11844,10 @@ class RscTitles {
             h = 0.7;
             colorText[] = {1,1,1,1};
             font = "\fonts\tahomaB36";
-            sizeEx = "0.6 * 0.03";
+            sizeEx = 0.018;
         };
         class web: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "www.codemasters.com";
             x = 0.41;
@@ -11817,14 +11856,14 @@ class RscTitles {
             h = 0.7;
             colorText[] = {1,1,1,1};
             font = "\fonts\tahomaB36";
-            sizeEx = "0.7 * 0.03";
+            sizeEx = 0.021;
         };
     };
     class CMProducer: creditsbackCM {
         name = "CMproducer";
         controls[] = {"Back","background","web","CM1","CM2","CM3","CM4","pub","work1","name1"};
         class work1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS13";
             x = 0.36;
@@ -11833,10 +11872,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.6 * 0.05";
+            sizeEx = 0.03;
         };
         class name1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN13";
             x = 0.36;
@@ -11845,14 +11884,14 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
     };
     class CMdesign: creditsbackCM {
         name = "CMdesign";
         controls[] = {"Back","background","web","CM1","CM2","CM3","CM4","pub","work1","name1"};
         class work1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS14";
             x = 0.36;
@@ -11861,10 +11900,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.6 * 0.05";
+            sizeEx = 0.03;
         };
         class name1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN14";
             x = 0.36;
@@ -11873,14 +11912,14 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
     };
     class CMQA: creditsbackCM {
         name = "CMQA";
         controls[] = {"Back","background","web","CM1","CM2","CM3","CM4","pub","work1","name1"};
         class work1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS15";
             x = 0.36;
@@ -11889,10 +11928,10 @@ class RscTitles {
             h = 0.93;
             colorText[] = {0.75,0.75,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.6 * 0.05";
+            sizeEx = 0.03;
         };
         class name1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN15";
             x = 0.36;
@@ -11901,14 +11940,14 @@ class RscTitles {
             h = 0.93;
             colorText[] = {1.0,1.0,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
     };
     class CMMrkev: creditsbackCM {
         name = "CMMrkev";
         controls[] = {"Back","background","web","CM1","CM2","CM3","CM4","pub","work1","name1"};
         class work1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS16";
             x = 0.36;
@@ -11917,10 +11956,10 @@ class RscTitles {
             h = 0.93;
             colorText[] = {0.75,0.75,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.6 * 0.05";
+            sizeEx = 0.03;
         };
         class name1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN16";
             x = 0.36;
@@ -11929,14 +11968,14 @@ class RscTitles {
             h = 0.93;
             colorText[] = {1.0,1.0,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.8 * 0.05";
+            sizeEx = 0.04;
         };
     };
     class CMVoice: creditsbackCM {
         name = "CMVoice";
         controls[] = {"Back","background","web","CM1","CM2","CM3","CM4","pub","work1","work2","name2","name1"};
         class work1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS17";
             x = 0.36;
@@ -11945,10 +11984,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.6 * 0.05";
+            sizeEx = 0.03;
         };
         class name1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN17";
             x = 0.36;
@@ -11957,10 +11996,10 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
         class work2: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS18";
             x = 0.36;
@@ -11969,10 +12008,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.6 * 0.05";
+            sizeEx = 0.03;
         };
         class name2: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN18";
             x = 0.36;
@@ -11981,14 +12020,14 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
     };
     class CMlocal: creditsbackCM {
         name = "CMlocal";
         controls[] = {"Back","background","web","CM1","CM2","CM3","CM4","pub","work1","work2","name2","name1"};
         class work1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS19";
             x = 0.36;
@@ -11997,10 +12036,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.6 * 0.05";
+            sizeEx = 0.03;
         };
         class name1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN19";
             x = 0.36;
@@ -12009,10 +12048,10 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
         class work2: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS20";
             x = 0.36;
@@ -12021,10 +12060,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.6 * 0.05";
+            sizeEx = 0.03;
         };
         class name2: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN20";
             x = 0.36;
@@ -12033,14 +12072,14 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
     };
     class CMlegal: creditsbackCM {
         name = "CMlegal";
         controls[] = {"Back","background","web","CM1","CM2","CM3","CM4","pub","work1","work2","name2","name1"};
         class work1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS21";
             x = 0.36;
@@ -12049,10 +12088,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.6 * 0.05";
+            sizeEx = 0.03;
         };
         class name1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN21";
             x = 0.36;
@@ -12061,10 +12100,10 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
         class work2: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS22";
             x = 0.36;
@@ -12073,10 +12112,10 @@ class RscTitles {
             h = 0.73;
             colorText[] = {0.75,0.75,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.6 * 0.05";
+            sizeEx = 0.03;
         };
         class name2: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITSN22";
             x = 0.36;
@@ -12085,7 +12124,7 @@ class RscTitles {
             h = 0.53;
             colorText[] = {1.0,1.0,1.0,1};
             font = "\fonts\SteelfishB64";
-            sizeEx = "0.9 * 0.05";
+            sizeEx = 0.045;
         };
     };
     class Endof {
@@ -12112,7 +12151,7 @@ class RscTitles {
             colorText[] = {0,0,0,0};
         };
         class copy: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS23";
             x = 0.03;
@@ -12121,7 +12160,7 @@ class RscTitles {
             h = 0.7;
             colorText[] = {1,1,1,1};
             font = "\fonts\tahomaB36";
-            sizeEx = "0.7 * 0.03";
+            sizeEx = 0.021;
         };
     };
     class foto {
@@ -12173,7 +12212,7 @@ class RscTitles {
             colorText[] = {0,0,0,0};
         };
         class copy: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS23";
             x = 0.03;
@@ -12182,7 +12221,7 @@ class RscTitles {
             h = 0.7;
             colorText[] = {1,1,1,1};
             font = "\fonts\tahomaB36";
-            sizeEx = "0.7 * 0.03";
+            sizeEx = 0.021;
         };
     };
     class Endof2 {
@@ -12209,7 +12248,7 @@ class RscTitles {
             colorText[] = {0,0,0,0};
         };
         class copy: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_CREDITS24";
             x = 0.03;
@@ -12218,7 +12257,7 @@ class RscTitles {
             h = 0.7;
             colorText[] = {1,1,1,1};
             font = "SteelfishB64CE";
-            sizeEx = "0.7 * 0.05";
+            sizeEx = 0.035;
         };
     };
     class maintitles1 {
@@ -12237,7 +12276,7 @@ class RscTitles {
             colorText[] = {0,0,0,0};
         };
         class maintitles_01: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_MAINTITLES_01";
             x = -0.02;
@@ -12249,7 +12288,7 @@ class RscTitles {
             sizeEx = 0.098;
         };
         class maintitles_02: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_MAINTITLES_02";
             x = 0.16;
@@ -12258,7 +12297,7 @@ class RscTitles {
             h = 0.5;
             colorText[] = {1,1,1,1};
             font = "\fonts\SteelfishB128";
-            sizeEx = "0.6 * 0.098";
+            sizeEx = 0.0588;
         };
     };
     class maintitles2 {
@@ -12277,7 +12316,7 @@ class RscTitles {
             colorText[] = {0,0,0,0};
         };
         class maintitles_03: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_MAINTITLES_03";
             x = -0.19;
@@ -12286,10 +12325,10 @@ class RscTitles {
             h = 0.5;
             colorText[] = {1,1,1,1};
             font = "\fonts\SteelfishB128";
-            sizeEx = "0.6 * 0.098";
+            sizeEx = 0.0588;
         };
         class maintitles_04: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_MAINTITLES_04";
             x = 0.01;
@@ -12298,10 +12337,10 @@ class RscTitles {
             h = 0.5;
             colorText[] = {1,1,1,1};
             font = "\fonts\SteelfishB128";
-            sizeEx = "1.0 * 0.098";
+            sizeEx = 0.098;
         };
         class maintitles_05: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_MAINTITLES_05";
             x = 0.26;
@@ -12310,7 +12349,7 @@ class RscTitles {
             h = 0.5;
             colorText[] = {1,1,1,1};
             font = "\fonts\SteelfishB128";
-            sizeEx = "0.6 * 0.098";
+            sizeEx = 0.0588;
         };
     };
     class maintitles3 {
@@ -12329,7 +12368,7 @@ class RscTitles {
             colorText[] = {0,0,0,0};
         };
         class maintitles_06: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1.0;
             text = "$STR_MAINTITLES_06";
             x = 0.045;
@@ -12338,7 +12377,7 @@ class RscTitles {
             h = 0.5;
             colorText[] = {1,1,1,1};
             font = "\fonts\SteelfishB128";
-            sizeEx = "1.4 * 0.098";
+            sizeEx = 0.1372;
         };
     };
     class binocular {
@@ -12376,7 +12415,7 @@ class RscTitles {
         name = "Demo 1";
         controls[] = {"Text"};
         class Text: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1;
             text = "Your transport is down. \nYou're about to ditch in hostile territory.";
             x = 0.05;
@@ -12385,7 +12424,7 @@ class RscTitles {
             h = 0.5;
             colorText[] = {1.0,1.0,1.0,1.0};
             font = "SteelfishB128";
-            sizeEx = "0.6 * 0.098";
+            sizeEx = 0.0588;
         };
     };
     class Demo2 {
@@ -12395,7 +12434,7 @@ class RscTitles {
         name = "Demo 2 - Think fast";
         controls[] = {"Text"};
         class Text: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1;
             text = "Think fast, what are your options?";
             x = 0.05;
@@ -12404,7 +12443,7 @@ class RscTitles {
             h = 0.5;
             colorText[] = {1.0,1.0,1.0,1.0};
             font = "SteelfishB128";
-            sizeEx = "0.6 * 0.098";
+            sizeEx = 0.0588;
         };
     };
     class Demo3 {
@@ -12414,7 +12453,7 @@ class RscTitles {
         name = "Demo 3 - Hide";
         controls[] = {"Text"};
         class Text: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1;
             text = "Hide?";
             x = 0.05;
@@ -12433,7 +12472,7 @@ class RscTitles {
         name = "Demo 4 - Fight";
         controls[] = {"Text"};
         class Text: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1;
             text = "Fight?";
             x = 0.05;
@@ -12442,7 +12481,7 @@ class RscTitles {
             h = 0.5;
             colorText[] = {1.0,1.0,1.0,1.0};
             font = "SteelfishB128";
-            sizeEx = "1.0 * 0.098";
+            sizeEx = 0.098;
         };
     };
     class Demo5 {
@@ -12452,7 +12491,7 @@ class RscTitles {
         name = "Demo 5 - Surrender";
         controls[] = {"Text"};
         class Text: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1;
             text = "Surrender?";
             x = 0.05;
@@ -12471,7 +12510,7 @@ class RscTitles {
         name = "Demo 6 - OFP your call";
         controls[] = {"Background","FP1","FP2","FP3","Text"};
         class Text: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1;
             text = "YOUR CALL.";
             x = 0.05;
@@ -12523,7 +12562,7 @@ class RscTitles {
         name = "Demo 7 TBC";
         controls[] = {"Background","Text","Text1"};
         class Text: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1;
             text = "JOIN NOW!";
             x = 0.05;
@@ -12532,10 +12571,10 @@ class RscTitles {
             h = 0.5;
             colorText[] = {1.0,1.0,1.0,1.0};
             font = "SteelfishB128";
-            sizeEx = "0.6 * 0.098";
+            sizeEx = 0.0588;
         };
         class Text1: RscText {
-            style = "16 +                   2 +                 512";
+            style = 530;
             lineSpacing = 1;
             text = "The ultimate test of your combat skills on PC CD-ROM.";
             x = 0.05;
@@ -12544,7 +12583,7 @@ class RscTitles {
             h = 0.5;
             colorText[] = {1.0,1.0,1.0,1.0};
             font = "SteelfishB64";
-            sizeEx = "0.8 * 0.05";
+            sizeEx = 0.04;
         };
         class Background: RscText {
             text = "";
@@ -12568,7 +12607,7 @@ class RscDisplayLoadMission {
         style = 2;
         colorText[] = {1,1,1,1};
         font = "SteelfishB64";
-        sizeEx = "1.0 * 0.05";
+        sizeEx = 0.05;
         x = 0;
         y = 0.45;
         w = 1;
@@ -12580,13 +12619,156 @@ class RscDisplayLoadMission {
         style = 2;
         colorText[] = {1,1,1,1};
         font = "SteelfishB64";
-        sizeEx = "0.8 * 0.05";
+        sizeEx = 0.04;
         x = 0;
         y = 0.5;
         w = 1;
         h = 0.05;
     };
 };
+class RscVDMJSqfCalc {
+    class VDMJ_RscCommonStyle {
+        idc = -1;
+        x = 0.001;
+        y = 0.001;
+        w = 0.002;
+        h = 0.002;
+        text = "";
+        action = "";
+        font = "tahomaB36";
+        style = 0;
+        sizeEx = 0.017;
+        color[] = {1,1,1,1};
+        colorText[] = {1,1,1,1};
+        colorActive[] = {0.8,0.9,0.3,1};
+        colorBackground[] = {0,0,0,0};
+        colorSelection[] = {0.2,0.2,0.2,1};
+        colorSelect[] = {0,0.05,0.05,1};
+        colorSelectBackground[] = {0.2,0.2,0.2,1};
+        soundEnter[] = {"ui\ui_over",0.2,1};
+        soundPush[] = {0.2,1};
+        soundClick[] = {"ui\ui_ok",0.2,1};
+        soundEscape[] = {"ui\ui_cc",0.2,1};
+        default = "false";
+        autocomplete = "false";
+        rowHeight = 0.02;
+        wholeHeight = 0.3;
+    };
+    class VDMJ_RscText: VDMJ_RscCommonStyle {
+        type = 0;
+    };
+    class VDMJ_RscTextMulti: VDMJ_RscText {
+        style = 16;
+        lineSpacing = 1;
+    };
+    class VDMJ_RscTitle: VDMJ_RscText {
+        style = "32+ 2";
+    };
+    class VDMJ_RscFrame: VDMJ_RscText {
+        style = 64;
+    };
+    class VDMJ_RscGround: VDMJ_RscText {
+        colorBackground[] = {0,0.05,0.08,0.7};
+    };
+    class VDMJ_RscTitleGround: VDMJ_RscText {
+        colorBackground[] = {0,0.05,0.08,0.75};
+    };
+    class VDMJ_RscLink: VDMJ_RscCommonStyle {
+        type = 11;
+        style = 2;
+    };
+    class VDMJ_RscEdit: VDMJ_RscCommonStyle {
+        type = 2;
+    };
+    class VDMJ_RscListBox: VDMJ_RscCommonStyle {
+        type = 5;
+    };
+    movingEnable = "true";
+    idd = -1;
+    class _1_: VDMJ_RscTitle {
+        x = "0.2-(1/1024)*7";
+        y = "0.3-(1/1024)*4";
+        w = "0.62+(1/1024)*13";
+        h = "0.55+(1/1024)*4";
+    };
+    class _2_: VDMJ_RscTitleGround {
+        text = "$STR/SQFCALC/NAME";
+        x = 0.2;
+        y = 0.3;
+        w = 0.62;
+        h = 0.03;
+    };
+    class _3_: VDMJ_RscGround {
+        text = "";
+        x = 0.2;
+        y = "0.3+0.03";
+        w = 0.62;
+        h = "0.55-0.03";
+    };
+    controlsBackground[] = {"_1_","_2_","_3_","TypeStringChecking"};
+    controls[] = {"Input","DisplayList","DisplayEdit","DisplayFrame","EvalButton","FormattedModeButton","ShowTypesModeButton"};
+    class TypeStringChecking: VDMJ_RscText {
+        idc = 98743;
+    };
+    class Input: VDMJ_RscEdit {
+        idc = 100;
+        x = 0.21;
+        y = 0.35;
+        w = 0.6;
+        h = 0.03;
+        autocomplete = "scripting";
+    };
+    class DisplayList: VDMJ_RscListBox {
+        idc = 103;
+        x = 0.21;
+        y = 0.42;
+        w = 0.6;
+        h = 0.4;
+    };
+    class DisplayEdit: VDMJ_RscTextMulti {
+        idc = 104;
+        type = 2;
+        x = 0.21;
+        y = 0.42;
+        w = 0.6;
+        h = 0.4;
+    };
+    class DisplayFrame: VDMJ_RscFrame {
+        idc = 105;
+        x = 0.21;
+        y = 0.42;
+        w = 0.6;
+        h = 0.4;
+    };
+    class EvalButton: VDMJ_RscLink {
+        idc = 106;
+        x = 0;
+        y = 0;
+        w = 0;
+        h = 0;
+        text = "";
+        action = "0 exec {\vdmj_sqfcalc\eval.sqs}";
+        default = 1;
+    };
+    class FormattedModeButton: VDMJ_RscLink {
+        idc = 107;
+        x = 0.21;
+        y = 0.385;
+        w = 0.138;
+        h = 0.03;
+        style = 0;
+        text = "$STR/SQFCALC/FORMATTED-ON";
+        action = "ctrlSetText [107, localize (if (ctrlText 107 == localize {STR/SQFCALC/FORMATTED-ON}) then { ctrlShow [103, false]; ctrlShow [104, true]; {STR/SQFCALC/FORMATTED-OFF} } else { ctrlShow [104, false]; ctrlShow [103, true]; {STR/SQFCALC/FORMATTED-ON} })]";
+    };
+    class ShowTypesModeButton: VDMJ_RscLink {
+        idc = 108;
+        x = 0.348;
+        y = 0.385;
+        w = 0.4;
+        h = 0.03;
+        style = 0;
+        text = "$STR/SQFCALC/SHOW-TYPES-ON";
+        action = "ctrlSetText [108, localize (if(ctrlText 108 == localize {STR/SQFCALC/SHOW-TYPES-ON}) then { {STR/SQFCALC/SHOW-TYPES-MODE-OFF} } else { {STR/SQFCALC/SHOW-TYPES-ON} })]";
+    };
+};
 //};
-
-#include "resource.sqfcalc.cpp"
