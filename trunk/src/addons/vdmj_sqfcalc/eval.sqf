@@ -162,7 +162,7 @@ _fParseTree = {
     // [ value or values tree, base text indent, callback functions for : event Scalar, event ArrayOpen, event ArrayClose ],
     // functions context space: _value, _depth, _comma, _indent, _type
     // (comment: current value, current depth, needs comma, current indent, type of current value)
-    private ["_input", "_baseInput", "_ehScalar", "_ehArrayOpen", "_ehArrayClose", "_fWalkTree"];
+    private ["_input", "_baseIndent", "_ehScalar", "_ehArrayOpen", "_ehArrayClose", "_fWalkTree"];
 
     _fWalkTree = {
         // arguments: current value, current depth, current indent, needs comma
@@ -183,7 +183,7 @@ _fParseTree = {
             call _ehArrayOpen;
             {
                 _i = _i-1;
-                [_x, _depth+1, _indent+_baseInput, ["", ","] select (_i != 0)] call _fWalkTree
+                [_x, _depth+1, _indent+_baseIndent, ["", ","] select (_i != 0)] call _fWalkTree
             } foreach _value;
             call _ehArrayClose;
         } else {
@@ -192,7 +192,7 @@ _fParseTree = {
     };
 
     _input = arg(0);
-    _baseInput = arg(1);
+    _baseIndent = arg(1);
     _ehScalar = arg(2);
     _ehArrayOpen = arg(3);
     _ehArrayClose = arg(4);
