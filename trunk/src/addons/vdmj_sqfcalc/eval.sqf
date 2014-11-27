@@ -241,7 +241,7 @@ call {
             lbAdd [IDC_DisplayList, _indent + "[" ];
         },
         {
-            _resultArray set [count _resultArray, "]"];
+            _resultArray set [count _resultArray, "]" + _comma];
             lbAdd [IDC_DisplayList, _indent + "]" + _comma];
         }
     ] call _fParseTree;
