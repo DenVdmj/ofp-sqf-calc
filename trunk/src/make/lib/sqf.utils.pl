@@ -108,6 +108,5 @@ sub foreachdirs {
     $_traversal->( $option {'path'} );
 }
 
-
 1;
 
