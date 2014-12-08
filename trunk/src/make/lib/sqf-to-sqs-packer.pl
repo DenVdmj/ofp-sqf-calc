@@ -42,11 +42,17 @@ BEGIN {
             $chunk =~ s/^\s+//;
             # удалить финальные пробелы и переводы строк
             $chunk =~ s/\s+$//;
+            # удалить некоторые очевидно лишние скобки,
+            # которые часто остаются от развернутых макро
+            $chunk =~ s/(\w+)\((\w+)\)/$1 $2/g;
+            $chunk =~ s/\((\([^\(\)]+\))\)/$1/g;
+            $chunk =~ s/\((\([^\(\)]+\))\)/$1/g;
+            $chunk =~ s/(\;|\,|\[|\=)\(([^\(\)]+)\)(\;|\,|\])/$1$2$3/g;
             return $chunk;
         });
     }
 
-    my $reservedVariableNames = qr/_x|_this|_exception|_pos|_units|_shift|_alt|_id|_uid|_name|_from|_to/;
+    my $reservedVariableNames = qr/_time|_this|_x|_forEachIndex|_exception|_pos|_units|_shift|_alt|_id|_uid|_name|_from|_to/;
 
     sub minifyVarNames {
         my $text = shift;
@@ -64,25 +70,6 @@ BEGIN {
             }
         }egis;
         $text =~ s/\b_x($reservedVariableNames)\b/$1/gi;
-        return $text;
-    }
-
-    sub minifyVarNames {
-        my $text = shift;
-        my $names = {};
-        my $counter = 0;
-        $text =~ s/\b(_\w+)\b/_X$1/g;
-        $text =~ s{\b(_\w+)\b}{
-            my $varname = $1;
-            my $varnamelc = lc $varname;
-            if ($varname =~ /^_x_(this|x)/i) {
-                $varname;
-            } else {
-                $names->{$varnamelc} = '_' . createname($counter++) unless defined $names->{$varnamelc};
-                $names->{$varnamelc};
-            }
-        }egis;
-        $text =~ s/\b_x_(this|x)\b/_$1/gi;
         return $text;
     }
 
