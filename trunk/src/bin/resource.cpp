@@ -12768,7 +12768,7 @@ class RscVDMJSqfCalc {
         h = 0.03;
         style = 0;
         text = "$STR/SQFCALC/SHOW-TYPES-ON";
-        action = "ctrlSetText [108, localize (if(ctrlText 108 == localize {STR/SQFCALC/SHOW-TYPES-ON}) then { {STR/SQFCALC/SHOW-TYPES-MODE-OFF} } else { {STR/SQFCALC/SHOW-TYPES-ON} })]";
+        action = "ctrlSetText [108, localize (if(ctrlText 108 == localize {STR/SQFCALC/SHOW-TYPES-ON}) then { {STR/SQFCALC/SHOW-TYPES-OFF} } else { {STR/SQFCALC/SHOW-TYPES-ON} })]";
     };
 };
 //};

@@ -213,6 +213,6 @@ class RscVDMJSqfCalc {
         x = 0.348; y = .385; w = 0.4; h = 0.03;
         style = ST_LEFT;
         text = "$STR/SQFCALC/SHOW-TYPES-ON";
-        action = "ctrlSetText [108, localize (if(ctrlText 108 == localize {STR/SQFCALC/SHOW-TYPES-ON}) then { {STR/SQFCALC/SHOW-TYPES-MODE-OFF} } else { {STR/SQFCALC/SHOW-TYPES-ON} })]";
+        action = "ctrlSetText [108, localize (if(ctrlText 108 == localize {STR/SQFCALC/SHOW-TYPES-ON}) then { {STR/SQFCALC/SHOW-TYPES-OFF} } else { {STR/SQFCALC/SHOW-TYPES-ON} })]";
     };
 };

@@ -90,18 +90,30 @@ _typesTable = [
 ];
 
 _fGetVarType = {
-    if (_this in [1e+999, -1e+999, 1e+999-1e+999]) then { NUMBER_TYPE } else {
-        if (!(_this in [_this])) then { ARRAY_TYPE } else {
-            if (_this in [true, false]) then { BOOL_TYPE } else {
-                if (_this in [east, west, resistance, civilian, sideFriendly, sideEnemy, sideLogic, side objNull]) then { SIDE_TYPE } else {
-                    if (_this in [""]) then { STRING_TYPE } else {
-                        ctrlSetText [98743, ""];
-                        ctrlSetText [98743, _this];
-                        if (ctrlText 98743 != "") then { STRING_TYPE } else {
-                            if ((("all" countType [_this]) != 0) || (_this in [grpNull, objNull]) || (format ["%1", _this] in ["NOID empty", "NOID camera"])) then {
-                                if (_this in [group leader _this]) then { GROUP_TYPE } else { OBJECT_TYPE }
+    if (_this in [1e+999, -1e+999]) then { NUMBER_TYPE } else {
+        if (_this in [true, false]) then { BOOL_TYPE } else {
+            if (_this in [east, west, resistance, civilian, sideFriendly, sideEnemy, sideLogic, side objNull]) then { SIDE_TYPE } else {
+                if (_this in [""]) then { STRING_TYPE } else {
+                    ctrlSetText [98743, ""];
+                    ctrlSetText [98743, _this];
+                    if (ctrlText 98743 != "") then { STRING_TYPE } else {
+                        if (
+                            (("all" countType [_this]) != 0) ||
+                            (_this in [grpNull, objNull]) ||
+                            (format ["%1", _this] in ["NOID empty", "NOID camera"])
+                        ) then {
+                            if (_this in [group leader _this]) then { GROUP_TYPE } else { OBJECT_TYPE }
+                        } else {
+                            if (format ["%1", _this-_this] == "-1.#IND") then {
+                                NUMBER_TYPE
                             } else {
-                                if (_this - _this == 0) then { NUMBER_TYPE } else { UNKNOWN_TYPE }
+                                if !(_this in [_this]) then { ARRAY_TYPE } else {
+                                    if (_this - _this == 0) then {
+                                        NUMBER_TYPE
+                                    } else {
+                                        UNKNOWN_TYPE
+                                    }
+                                }
                             }
                         }
                     }
