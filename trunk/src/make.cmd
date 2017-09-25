@@ -34,22 +34,27 @@ mkdir "%TargetDir%\addons" > nul
 del /Q "%TargetDir%\%addon%.pbo" > nul
 %ToolMakepbo% "%WorkPlace%\%addon%" "%TargetDir%\%addon%.pbo"
 
-
 call :CopyAddonsToGameFolder "HKLM\SOFTWARE\Codemasters\Operation Flashpoint" "MAIN"
 call :CopyAddonsToGameFolder "HKLM\SOFTWARE\Bohemia Interactive Studio\ColdWarAssault" "MAIN"
-
 
 goto:eof
 
 :CopyAddonsToGameFolder
     setlocal
     set gamepath=
+    echo.
+    echo.--RegRead--------------------
     call :RegRead "gamepath" "%~1" "%~2" "%~3"
+    echo.-----------------------------
     if not "%gamepath%"=="" (
-        echo install for %~3
+        echo Install for %~3
         xcopy /Y "%TargetDir%\addons" "%gamepath%\%InstallDir%\addons\"
         xcopy /Y "%TargetDir%\bin" "%gamepath%\%InstallDir%\bin\"
+    ) else (
+        echo Not found: "%~1"
     )
+    echo.
+    echo.-----------------------------
     endlocal
 goto:eof
 
@@ -62,10 +67,30 @@ goto:eof
     xcopy "%~2\%~1" "%~3\%~1"
 goto:eof
 
-:RegRead
-    for /F "tokens=1,2,*" %%i in ('reg query "%~2" /v "%~3"') do (
-        if "%%i"=="%~3" (
-            set %~1=%%k%~4
+:RegReadTry
+    for /F "tokens=1,2,* delims=()" %%i in ('%reg% query "%~2" /v "%~3" /z') do (
+        if "%%i"=="    %~3    REG_SZ " (
+            set %~1=%%k
+            set %~1=!%~1:    =!
+            goto:eof
         )
     )
-goto :eof
+goto:eof
+
+:RegRead
+    setlocal
+    if defined PROCESSOR_ARCHITEW6432 (
+        set reg="%systemroot%\sysnative\reg.exe"
+    ) else (
+        set reg=reg
+    )
+    set software_key=%~2
+    call:RegReadTry "result" "%software_key%" "%~3" 2>nul
+    if "%RESULT%"=="" (
+        set software_key=!software_key:HKLM\SOFTWARE=HKLM\SOFTWARE\Wow6432Node!
+        set software_key=!software_key:HKCU\SOFTWARE=HKCU\SOFTWARE\Wow6432Node!
+        call:RegReadTry "result" "!software_key!" "%~3"
+    )
+    endlocal & set %~1=%result%
+goto:eof
+
